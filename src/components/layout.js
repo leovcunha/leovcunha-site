@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { AppBar } from "@material-ui/core"
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -9,6 +10,7 @@ const Layout = ({ location, title, children }) => {
 
   if (location.pathname === rootPath) {
     header = (
+    <AppBar>
       <h1
         style={{
           ...scale(1.5),
@@ -26,9 +28,11 @@ const Layout = ({ location, title, children }) => {
           {title}
         </Link>
       </h1>
+      </AppBar>
     )
   } else {
     header = (
+    <AppBar>
       <h3
         style={{
           fontFamily: `Montserrat, sans-serif`,
@@ -45,6 +49,7 @@ const Layout = ({ location, title, children }) => {
           {title}
         </Link>
       </h3>
+      </AppBar>
     )
   }
   return (
@@ -56,7 +61,8 @@ const Layout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header>{header}</header>
+      <header>{header}
+      </header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with

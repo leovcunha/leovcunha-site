@@ -3,12 +3,13 @@ module.exports = {
     title: `Leo V. Cunha`,
     author: {
       name: ``,
-      summary: `A software | machine learning engineer`,
+      summary: `A software engineer interested in machine learning and web applications`,
+                
     },
     description: `personal page in gatsby`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: ``,
+      twitter: `twitter.com/leovcunha`,
     },
   },
   plugins: [
@@ -76,6 +77,26 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+        resolve: `gatsby-plugin-material-ui`,
+        options: {
+        stylesProvider: {
+            injectFirst: true,
+        },
+        },
+    },
+    {
+        resolve: `gatsby-plugin-emotion`,
+        options: {
+            // Accepts the following options, all of which are defined by `@emotion/babel-plugin` plugin.
+            // The values for each key in this example are the defaults the plugin uses.
+            sourceMap: true,
+            autoLabel: "dev-only",
+            labelFormat: `[local]`,
+            cssPropOptimization: true,
+        },
+    },
+      
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
