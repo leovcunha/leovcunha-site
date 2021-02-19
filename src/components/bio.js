@@ -7,7 +7,7 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 import Image from "gatsby-image"
 
 import { rhythm } from "../utils/typography"
@@ -28,9 +28,7 @@ const Bio = () => {
             name
             summary
           }
-          social {
-            twitter
-          }
+
         }
       }
     }
@@ -39,8 +37,8 @@ const Bio = () => {
   const { author, social } = data.site.siteMetadata
   const StyledDiv = styled.div`
     display: flex;
-    marginBottom: rhythm(2.5); 
-  `
+    marginBottom: rhythm(2.5);
+  `;
   return (
     <StyledDiv>
       <Image
@@ -57,7 +55,7 @@ const Bio = () => {
         }}
       />
       <p>
-        <strong>{author.name}</strong> {author.summary}
+        {author.name} {author.summary}
         {` `}
       </p>
     </StyledDiv>

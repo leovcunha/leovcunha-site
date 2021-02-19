@@ -3,16 +3,19 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
+import  SocialButtons from "../components/social-buttons"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  const socialNetworks = data.site.siteMetadata.social
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
+      <SocialButtons {...socialNetworks}/>
       <Bio />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
@@ -51,7 +54,13 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        social {
+            twitter
+            github
+            linkedin
+          }
       }
+
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {

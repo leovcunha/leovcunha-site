@@ -3,13 +3,15 @@ module.exports = {
     title: `Leo V. Cunha`,
     author: {
       name: ``,
-      summary: `A software engineer interested in machine learning and web applications`,
+      summary: `AI, Machine learning, Data Science, Web Applications and everything in-between.`,
                 
     },
     description: `personal page in gatsby`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
-      twitter: `twitter.com/leovcunha`,
+      twitter: `https://twitter.com/leovcunha`,
+      github: `https://github.com/leovcunha`,
+      linkedin: `https://linkedin.com/leandro-vcunha`
     },
   },
   plugins: [
