@@ -43,7 +43,14 @@ const Layout = ({ location, title, children }) => {
             }}
             to={`/`}
           >
-            {title}
+            <img
+              src="https://fontmeme.com/permalink/210220/015d310afe6d9b998de64b217a8cf927.png"
+              alt="fonte-xtreem"
+              border="0"
+              css={css`
+                width: 20rem;
+              `}
+            />
           </Link>
         </h1>
         <LinksBar></LinksBar>
@@ -51,7 +58,7 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <>
+      <PositionedDiv>
         <h3
           style={{
             fontFamily: `Montserrat, sans-serif`,
@@ -65,28 +72,35 @@ const Layout = ({ location, title, children }) => {
             }}
             to={`/`}
           >
-            {title}
+            <img
+              src="https://fontmeme.com/permalink/210220/015d310afe6d9b998de64b217a8cf927.png"
+              alt="fonte-xtreem"
+              border="0"
+            />
           </Link>
         </h3>
         <LinksBar></LinksBar>
-      </>
+      </PositionedDiv>
     )
   }
   return (
     <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(36),
-        padding: `${rhythm(0.1)} ${rhythm(3 / 4)}`,
-      }}
+      css={css`
+        margin-left: auto;
+        margin-right: auto;
+        max-width: ${rhythm(36)};
+        padding: ${rhythm(0.1)} ${rhythm(3 / 4)};
+        a {
+          color: #292859;
+        }
+      `}
     >
       <header>{header}</header>
       <main>{children}</main>
       <Img
         fixed={data.neural.childImageSharp.fixed}
         style={{
-          position: "absolute",
+          position: "fixed",
           top: "0px",
           left: "0px",
           overflow: "hidden",
