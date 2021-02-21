@@ -76,6 +76,9 @@ const Layout = ({ location, title, children }) => {
               src="https://fontmeme.com/permalink/210220/015d310afe6d9b998de64b217a8cf927.png"
               alt="fonte-xtreem"
               border="0"
+              css={css`
+                width: 20rem;
+              `}
             />
           </Link>
         </h3>
