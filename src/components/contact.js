@@ -6,7 +6,7 @@ import SendIcon from "@material-ui/icons/Send";
 import { rhythm } from "../utils/typography";
 
 const Contact = () => {
-  const innerHeight = typeof window !== `undefined` ? window.innerHeight : 600;
+  const innerH = typeof window !== `undefined` ? window.innerHeight : 600;
   const [value, setValue] = React.useState("");
 
   const handleChange = event => {
@@ -20,7 +20,7 @@ const Contact = () => {
       id="contact"
       css={css`
         background-color: white;
-        min-height: ${`${innerHeight}px`};
+        min-height: ${`${innerH}px`};
       `}
     >
       <h3>Contact</h3>

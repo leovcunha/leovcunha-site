@@ -34,10 +34,10 @@ const Layout = ({ location, title, children, socialNetworks }) => {
     }
   `);
 
-  const screen =
+  const screenW =
     typeof window !== `undefined` ? window.screen : { width: 1080 };
 
-  const [screenWidth, setScreenWidth] = React.useState(screen.width);
+  const [screenWidth, setScreenWidth] = React.useState(screenW);
   const [scrollPosition, setScrollPosition] = useScrollPosition();
 
   React.useEffect(() => {
@@ -95,7 +95,7 @@ const Layout = ({ location, title, children, socialNetworks }) => {
             `}
           `}
         >
-          {screen.width < 680 ? (
+          {screenW < 680 ? (
             <MobileLinksMenu location={location} />
           ) : (
             <LinksBar location={location} />

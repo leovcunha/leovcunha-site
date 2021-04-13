@@ -4,7 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import { css } from "@emotion/react";
 import { rhythm } from "../utils/typography";
 
-const innerHeight = typeof window !== `undefined` ? window.innerHeight : 600;
+const innerH = typeof window !== `undefined` ? window.innerHeight : 600;
 const style = css`
   height: 200px;
 `;
@@ -15,7 +15,7 @@ const Projects = () => {
       css={css`
         width: 100%;
         background-color: #fdfdfd;
-        min-height: ${`${innerHeight}px`};
+        min-height: ${`${innerH}px`};
       `}
     >
       <h3>Projects</h3>
