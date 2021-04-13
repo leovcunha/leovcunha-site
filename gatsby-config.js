@@ -3,9 +3,9 @@ module.exports = {
     title: `Leo V. Cunha`,
     author: {
       name: ``,
-      summary: `I'm a software engineer. I'm interested in Algorithms, AI, Machine learning, Data Science, 
-      Web Applications and everything in-between. I built this page to present my personal projects and writings
-      in these themes. Feel free to explore. `,
+      summary: `Software Engineer, M.Sc. Electrical Engineering with passion for Computer Science.
+                My interests are Machine learning, AI, Web Applications and their intersections.  \n\n
+       `,
     },
     description: `personal page in gatsby`,
     siteUrl: `https://leovcunha.github.io/`,
@@ -97,6 +97,16 @@ module.exports = {
         autoLabel: "dev-only",
         labelFormat: `[local]`,
         cssPropOptimization: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Raleway`,
+          `source sans pro\:100,200,400`, // you can also specify font weights and styles
+        ],
+        display: "swap",
       },
     },
 

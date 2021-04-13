@@ -13,6 +13,10 @@ const PositionedBar = styled.div`
     box-shadow: none;
     padding-right: 10px;
   }
+  @media (max-width: 680px) {
+    top: 4rem;
+    right: 1.5rem;
+  }
 `
 const SocialButtons = props => {
   return (
